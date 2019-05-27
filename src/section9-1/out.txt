@@ -1,0 +1,8 @@
+const path = require('path');
+const fs = require('fs');
+
+console.log(path.normalize('/section9/../index.js'));
+
+console.log({ __filename, __dirname });
+const data = fs.readFileSync(__filename, 'utf8');
+fs.writeFileSync(path.join(__dirname, 'out.txt'), data, 'utf8');
